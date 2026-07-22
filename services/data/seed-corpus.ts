@@ -1,0 +1,28 @@
+export interface SeedPattern {
+  id: string;
+  scamType: string;
+  text: string;
+}
+
+export const SEED_SCAM_CORPUS: SeedPattern[] = [
+  { id: "DA-01", scamType: "digital_arrest", text: "This is Inspector Sharma from Mumbai Cyber Crime Cell. Your Aadhaar number has been linked to a parcel containing illegal drugs and fake passports intercepted at Mumbai Customs. A case has been registered against you under NDPS Act. Do not disconnect this call or you will be arrested immediately." },
+  { id: "DA-02", scamType: "digital_arrest", text: "Sir, this is CBI headquarters. Your bank account is linked to a money laundering case involving Rs 2.3 crore. You are under digital arrest until further investigation. Please stay on this video call and do not inform anyone, including family, or you will face immediate arrest." },
+  { id: "DA-03", scamType: "digital_arrest", text: "This is Customs Department Delhi. A courier addressed to you was seized containing 5 fake passports, USD currency, and MDMA drugs. FedEx has confirmed your Aadhaar and phone number are attached to this parcel. We are transferring your call to Delhi Police for verification." },
+  { id: "DA-04", scamType: "digital_arrest", text: "Your SIM card is being used for illegal activities and will be deactivated in 2 hours as per TRAI/Telecom regulations. To avoid disconnection and legal action, press 9 to connect to a cyber crime officer immediately." },
+  { id: "DA-05", scamType: "digital_arrest", text: "This is Enforcement Directorate. We have found your bank account name in a hawala transaction linked to a terror funding case. You must cooperate fully during this video call or a non-bailable warrant will be issued in your name within 24 hours." },
+  { id: "BP-01", scamType: "digital_arrest", text: "To prove your innocence and get bail verification cleared, you need to transfer Rs 50,000 to the RBI verification account below. This amount will be refunded within 24 hours once your identity is cleared of all charges." },
+  { id: "BP-02", scamType: "digital_arrest", text: "As per court order, you must deposit a refundable security bond to avoid immediate arrest. Send the amount to this UPI ID: legalverify2024@oksbi — this is a government-monitored account and the funds are fully protected." },
+  { id: "BP-03", scamType: "digital_arrest", text: "Your case can be closed today if you cooperate. Transfer the processing fee to this account for RTGS verification: A/C 50100234567890, IFSC HDFC0001234. Keep the transaction receipt as proof of cooperation." },
+  { id: "UF-01", scamType: "upi_fraud", text: "Congratulations! You are eligible for a cashback refund of Rs 4,999 from your recent online purchase. Click this link and enter your UPI PIN to receive the refund instantly: bit.ly/refund-claim-2026" },
+  { id: "UF-02", scamType: "upi_fraud", text: "Hi, I am interested in the item you posted on OLX. I've sent Rs 5000 as advance via UPI, please accept the collect request I've sent to confirm and I'll transfer the rest today." },
+  { id: "UF-03", scamType: "upi_fraud", text: "Your electricity bill payment failed due to KYC mismatch. Your power will be disconnected tonight at 9:30 PM. Update your KYC immediately by clicking here and completing UPI verification: powerkyc-update.in" },
+  { id: "UF-04", scamType: "upi_fraud", text: "This is from your bank's fraud prevention team. We've detected suspicious login attempts on your account. To secure your account, please share the OTP sent to your phone so we can block the unauthorized access." },
+  { id: "JS-01", scamType: "job_scam", text: "Congratulations, you've been shortlisted for a work-from-home data entry job paying Rs 30,000/month. To activate your employee ID and receive the first task, pay a one-time registration fee of Rs 1,999." },
+  { id: "JS-02", scamType: "job_scam", text: "We are hiring for part-time YouTube video liking tasks, earn Rs 500 per task. Join our Telegram channel to receive tasks and start earning today. First task is free, subsequent tasks require a small deposit to unlock higher-paying tasks." },
+  { id: "JS-03", scamType: "job_scam", text: "HR Team here. Your interview for the position at Amazon has been scheduled. Please pay the refundable security deposit of Rs 8,500 to confirm your slot and receive your offer letter within 24 hours." },
+  { id: "LP-01", scamType: "lottery_prize", text: "You have won Rs 25,00,000 in the KBC Lucky Draw 2026 sponsored by Reliance Jio. To claim your prize, pay the processing and GST charges of Rs 15,000 to the account details below within 48 hours." },
+  { id: "LP-02", scamType: "lottery_prize", text: "Your mobile number has been randomly selected as the winner of an iPhone 16 Pro in our anniversary contest. Pay a nominal delivery and customs fee of Rs 2,500 to receive your prize at your doorstep." },
+  { id: "IF-01", scamType: "investment_fraud", text: "Join our exclusive stock trading group, guaranteed 300% returns in 30 days. Our SEBI-registered analyst will guide you. Initial investment of just Rs 10,000 required to start, deposit via the link shared in the group." },
+  { id: "IF-02", scamType: "investment_fraud", text: "This is a crypto investment opportunity through our verified trading bot. Members are earning Rs 50,000 daily. Deposit funds to your dashboard wallet to begin, minimum entry Rs 25,000, withdrawals processed within 24 hours." },
+  { id: "FE-01", scamType: "family_emergency", text: "Mom, this is my new number, my phone got stolen. I'm in trouble and need money urgently, please send Rs 15,000 to this UPI ID right now, I'll explain everything later, please don't call the old number." }
+];

@@ -1,0 +1,6 @@
+{
+  "name": "RakshaNet",
+  "description": "An AI-powered digital public safety platform that detects scam messages, engages scammers, and helps law enforcement investigate organized fraud networks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
