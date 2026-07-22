@@ -1,412 +1,325 @@
 <div align="center">
 
-# 🛡️ RakshaNet
+# RakshaNet
 
 ### AI-Powered Cyber Scam Detection, Disruption & Threat Intelligence Platform
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)]()
-[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)]()
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)]()
-[![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)]()
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)]()
+<p>
+<b>Turning isolated scam reports into actionable cyber intelligence — detect fraud, disrupt scammers, and expose organized networks.</b>
+</p>
 
-*Transforming isolated scam reports into actionable cyber intelligence.*
+<p>
+<a href="https://rakshanet-production.up.railway.app/"><img src="https://img.shields.io/badge/🚀_Live_Demo-rakshanet--production.up.railway.app-6366F1?style=for-the-badge&logoColor=white" /></a>
+</p>
+
+<p>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black" />
+<img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/Gemini_API-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" />
+<img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
+<img src="https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white" />
+</p>
 
 </div>
 
 ---
 
-# 📖 Overview
+## 🚨 Problem Statement
 
-RakshaNet is an AI-driven cybersecurity platform designed to help citizens identify digital fraud, assist investigators through intelligent evidence extraction, and uncover organized scam networks.
+India registered **1.14 million cybercrime complaints in 2023** (+60% YoY). "Digital arrest" scams — fraudsters impersonating CBI/ED/Customs officers, trapping victims on video calls — alone cost citizens **₹1,776+ crore** in the first nine months of 2024 (MHA). These are industrialized, cross-border operations reusing the same scripts and infrastructure against thousands of victims.
 
-Instead of merely classifying suspicious messages as spam or scam, RakshaNet explains **why** a message is dangerous, extracts critical indicators, correlates reports across victims, and generates intelligence that can assist cybercrime investigators.
+The gap isn't evidence after the fact — it's **intelligence before mass victimization**. Complaints today are investigated in isolation, after the money has moved, with no explanation, no cross-victim linkage, and no evidence gathered while the scam is live. RakshaNet closes that gap.
 
-The platform follows a complete intelligence pipeline:
+## 🧭 What It Does
 
-```
-Citizen Report
-      │
-      ▼
- AI Detection
-      │
-      ▼
- Risk Analysis
-      │
-      ▼
- Evidence Extraction
-      │
-      ▼
- Threat Intelligence
-      │
-      ▼
- Network Analysis
-      │
-      ▼
- Advisory Generation
-```
+RakshaNet is an end-to-end anti-fraud platform for digital scams in India — digital arrest coercion, UPI fraud, job/lottery/investment scams, and family-emergency impersonation. Every report runs through a full intelligence pipeline, not a spam filter:
 
----
+- **Detects** — OCR + 17 entity extractors (UPI, phone, bank, wallets, socials, obfuscated numbers) feed an *explainable* 0–100 risk score.
+- **Disrupts** — high-confidence scams trigger an AI decoy that stalls the scammer and extracts their payment details live.
+- **Escalates** — reports sharing entities auto-link on a network graph, exposing syndicates. One click generates a print-ready advisory.
 
-# ✨ Key Features
+Every stage writes an audit log entry — the full decision trail is reconstructable.
 
-## 🔍 Detect
+## 💡 Key Innovations
 
-- OCR for screenshots
-- AI-powered scam classification
-- Explainable Risk Score (0–100)
-- Threat intelligence lookup
-- Entity extraction
-- Similarity-based scam detection
-- Knowledge-base powered reasoning
+- ✅ **Explainable Hybrid Risk Engine** — weighted score, not a black box
+- ✅ **AI Decoy Intelligence Gathering** — extracts evidence from live scams
+- ✅ **Self-Learning Threat Knowledge Base** — grows with every confirmed scam
+- ✅ **Cross-Report Entity Correlation** — links victims into syndicate networks
+- ✅ **Automated Investigation Advisories** — one-click, print-ready, evidence-backed
 
----
 
-## 🎭 Disrupt
+## 🎥 Live Demo
 
-- AI Decoy Chat
-- Evidence gathering from scam conversations
-- Automatic extraction of new indicators
-- Continuous session enrichment
+**🔗 [rakshanet-production.up.railway.app](https://rakshanet-production.up.railway.app/)**
 
----
+Try the full flow live: submit a report through the **Citizen Portal**, watch the **AI Decoy** engage a high-risk scammer in real time, then switch to the **Officer Dashboard** to see the case land on the network graph with a generated advisory. The in-app **How It Works** page walks through each pipeline stage (OCR → extraction → RAG lookup → classification → composite risk score) with the same explanations used below.
 
-## 📊 Escalate
+## ✨ Features
 
-- Officer Dashboard
-- Scam Network Graph
-- Threat clustering
-- Advisory generation
-- Session history
-- Intelligence repository
+<table>
+<tr>
+<td width="33%" valign="top">
 
----
+### 🔍 Detect
+- OCR extraction from screenshots via Gemini Vision
+- Explainable composite risk score (0–100) with categorized reasons — identity, pressure, financial, pattern
+- 17+ entity extractors: UPI, phone, IFSC, PAN, masked Aadhaar, bank accounts, crypto wallets, socials
+- Catches obfuscated indicators (spelled-out numbers, spaced-out keywords like "o.t.p")
+- RAG-grounded classification against a self-learning scam pattern library
 
-# 🚀 System Architecture
+</td>
+<td width="33%" valign="top">
 
-```
-Citizen
-   │
-   ▼
-Message / Screenshot
-   │
-   ▼
-OCR
-   │
-   ▼
-Threat Intelligence
-   │
-   ▼
-AI Scam Classifier
-   │
-   ▼
-Knowledge Base Matching
-   │
-   ▼
-Composite Risk Engine
-   │
-   ▼
-Entity Extraction
-   │
-   ▼
-Threat Repository
-   │
-   ▼
-Decoy Agent
-   │
-   ▼
-Graph Intelligence
-   │
-   ▼
-Officer Dashboard
-   │
-   ▼
-Advisory Generator
-```
+### 🎭 Disrupt
+- AI decoy persona engages high-confidence scammers automatically
+- Confidence-gated escalation — activates only once enough signal accumulates
+- Extracts UPI handles, bank details, and contact info mid-conversation
+- Every message updates the live case file in real time
 
----
+</td>
+<td width="33%" valign="top">
 
-# ⚙️ Core Capabilities
+### 📊 Escalate
+- Officer dashboard with live session feed and per-case audit trail
+- Network graph linking reports sharing entities — surfaces organized syndicates
+- One-click formatted intelligence advisory (print/download as Markdown)
+- Growing knowledge base — confirmed high-risk reports feed back into detection
 
-### 📄 OCR Processing
+</td>
+</tr>
+</table>
 
-Extracts text from uploaded screenshots before analysis.
+## 🏗️ Architecture
 
----
-
-### 🤖 AI Classification
-
-Identifies scams such as:
-
-- Digital Arrest
-- UPI Fraud
-- Job Scam
-- Lottery Scam
-- Investment Fraud
-- Family Emergency Scam
-
----
-
-### 📈 Explainable Risk Engine
-
-Instead of giving a generic warning, RakshaNet produces:
-
-- Numerical Risk Score
-- Confidence
-- Evidence-backed reasoning
-- Risk category
-- Detection indicators
-
-Example
+**Pipeline flow — every citizen report moves through this chain:**
 
 ```
-Risk Score : 92/100
-
-✓ Impersonation detected
-✓ Requests financial transfer
-✓ Suspicious UPI ID
-✓ Matches known fraud pattern
-✓ High urgency language
+ Citizen Report (text or screenshot)
+        │
+        ▼
+   OCR Extraction  ──────────────  Gemini Vision reads screenshot text
+        │
+        ▼
+  Text Normalization  ───────────  Unicode cleanup, de-obfuscation
+        │
+        ▼
+  Entity Extraction  ────────────  UPI / phone / bank / URL / wallet / social IDs
+        │
+        ▼
+  Threat Intelligence Lookup  ───  Heuristic engine + cross-report DB correlation
+        │
+        ▼
+  RAG Pattern Retrieval  ────────  Embedding similarity vs. scam pattern library
+        │
+        ▼
+  AI Classification  ────────────  Gemini, grounded in retrieved patterns
+        │
+        ▼
+  Composite Risk Engine  ────────  Weighted score: blacklist + RAG + behavioral + AI confidence
+        │
+        ▼
+  ┌─────────────┴─────────────┐
+  ▼                             ▼
+Session + Audit Log Storage    AI Decoy Agent (if risk is high)
+  │                             │
+  ▼                             ▼
+Network Graph Correlation ──────┘
+        │
+        ▼
+  Officer Dashboard → Advisory Generator
 ```
 
----
+**How the risk score is built** — this is the core of RakshaNet's explainability:
 
-### 🧠 Knowledge-Based Detection
+| Signal | Weight | Source |
+|---|---|---|
+| Known-scam entity match | 0–35 pts | Cross-report database correlation + heuristic blacklist |
+| RAG pattern similarity | 0–25 pts | Embedding similarity to known scam scripts |
+| Behavioral/keyword signals | 0–20 pts | Rule-based engine (urgency language, OTP requests, gov impersonation, remote-access solicitation, etc.) |
+| AI classification confidence | 0–20 pts | Gemini's own confidence in its classification |
 
-Incoming messages are compared against previously identified scam patterns to improve detection accuracy.
+Score bands: 🟢 **Green** (0–30) · 🟡 **Amber** (31–60) · 🟠 **Orange** (61–85) · 🔴 **Red** (86–100)
 
----
+**Resilience** — if PostgreSQL is unavailable, the app falls back to an in-memory store with the same schema, so the pipeline keeps working unchanged.
 
-### 🕵 Threat Intelligence
+## 🛠️ Tech Stack
 
-Automatically detects:
+| Layer | Technology |
+|---|---|
+| **Frontend** | React 19, TypeScript, Vite, Tailwind CSS |
+| **Backend** | Node.js, Express |
+| **Database** | PostgreSQL via Drizzle ORM (with automatic in-memory fallback) |
+| **AI / ML** | Google Gemini — classification, OCR, embeddings (RAG), decoy generation |
+| **Deployment** | Railway |
 
-- Phone numbers
-- UPI IDs
-- URLs
-- Bank accounts
-
-and checks them against previously reported indicators.
-
----
-
-### 🎭 Decoy Agent
-
-High-risk conversations can continue with an AI persona that safely engages scammers while collecting additional intelligence.
-
----
-
-### 🌐 Network Graph
-
-Links multiple scam reports sharing common entities such as
-
-- Phone Numbers
-- UPI IDs
-- URLs
-- Bank Accounts
-
-to identify organized fraud networks.
-
----
-
-### 📑 Advisory Generator
-
-Creates structured cybercrime advisories containing
-
-- Threat summary
-- Indicators
-- Linked reports
-- Recommended actions
-
----
-
-# 🛠️ Tech Stack
-
-## Frontend
-
-- React
-- TypeScript
-- Vite
-- CSS
-
-## Backend
-
-- Node.js
-- Express
-
-## Database
-
-- PostgreSQL
-
-## AI
-
-- Large Language Models
-- OCR
-- Embeddings
-- Retrieval-Augmented Generation (RAG)
-
----
-
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```
 RakshaNet
 │
-├── assets
-├── config
-├── database
-├── middleware
-├── routes
-├── services
-│     ├── OCR
-│     ├── Threat Intelligence
-│     ├── Risk Engine
-│     ├── Entity Extraction
-│     ├── Knowledge Base
-│     └── Advisory
+├── agents/                       # LLM prompt templates
+│   ├── decoy.agent.ts             → AI decoy persona instructions
+│   └── advisory.agent.ts           → Intelligence advisory generator prompt
 │
-├── src
-│     ├── components
-│     ├── pages
-│     └── types
+├── config/                      # Environment configuration
+│   └── index.ts
 │
-├── server.ts
-├── package.json
-└── README.md
+├── database/                     # DB connection, seeding, in-memory fallback store
+│   ├── connection.ts
+│   ├── memory-store.ts
+│   └── seeding.ts
+│
+├── drizzle/                      # Schema migrations
+│   ├── 0000_freezing_orphan.sql
+│   └── meta/
+│       ├── 0000_snapshot.json
+│       └── _journal.json
+│
+├── middleware/                    # Logging, error handling, rate limiting
+│   ├── error.middleware.ts
+│   ├── logging.middleware.ts
+│   └── rate-limiting.middleware.ts
+│
+├── repositories/                   # Data access layer
+│   ├── audit.repository.ts
+│   ├── entity.repository.ts
+│   └── session.repository.ts
+│
+├── routes/
+│   └── api.routes.ts               → All REST endpoints (/analyze, /decoy, /sessions, /advisory...)
+│
+├── services/
+│   ├── data/
+│   │   └── seed-corpus.ts            → Seed data for scam pattern knowledge base
+│   ├── decoy.service.ts              → Decoy escalation & conversation logic
+│   ├── graph.service.ts              → Network graph builder
+│   ├── reputation-intel.service.ts     → Cross-report entity correlation
+│   ├── intel/                     # Core intelligence pipeline
+│   │   ├── ai.service.ts               → Gemini API client wrapper
+│   │   ├── classifier.service.ts         → Gemini scam classification
+│   │   ├── composite-risk.service.ts      → Final weighted risk score
+│   │   ├── entity-extraction.service.ts    → Obscured/verbalized entity discovery
+│   │   ├── extraction.service.ts          → Regex-based entity extraction
+│   │   ├── flatten-entities.ts           → Entity result normalization helper
+│   │   ├── knowledge-base.service.ts       → RAG pattern store & similarity search
+│   │   ├── normalization.service.ts        → Text cleanup & de-obfuscation
+│   │   ├── reputation.service.ts          → Heuristic reputation checks
+│   │   ├── risk-engine.service.ts         → Behavioral keyword scoring
+│   │   ├── threat-intel.service.ts        → Threat intel orchestration
+│   │   └── providers/                 → Swappable reputation data providers
+│   │       ├── heuristic.provider.ts
+│   │       └── threat-intel.provider.ts
+│   └── ocr/                       → OCR provider abstraction (Gemini Vision)
+│       ├── gemini-ocr.provider.ts
+│       ├── ocr.interface.ts
+│       └── ocr.service.ts
+│
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│   ├── types.ts
+│   ├── components/
+│   │   ├── CitizenPortalPage.tsx        → Report intake + results + decoy chat
+│   │   ├── OfficerDashboardPage.tsx       → Case list, detail view, graph
+│   │   ├── NetworkGraph.tsx           → Entity relationship visualization
+│   │   ├── ExplainableAiPanel.tsx        → Risk score breakdown UI
+│   │   ├── MhaAlertModal.tsx           → Printable advisory document
+│   │   └── HowItWorksPage.tsx          → Pipeline explainer page
+│   └── db/                       → Drizzle schema & client
+│       ├── index.ts
+│       ├── schema.ts
+│       └── drizzle.config.ts
+│
+├── utils/
+│   ├── redact.ts                  → PII redaction before RAG corpus growth
+│   └── scam-filter.ts               → Lightweight decoy-mode intel extraction
+│
+└── server.ts                      # App entry point
 ```
 
----
+## 🚀 Getting Started
 
-# 🚀 Getting Started
-
-## Clone Repository
-
+### Clone & Install
 ```bash
-git clone https://github.com/YOUR_USERNAME/RakshaNet.git
-```
-
-```
+git clone https://github.com/vaishnavi-212/RakshaNet.git
 cd RakshaNet
-```
-
----
-
-## Install Dependencies
-
-```
 npm install
 ```
 
----
+### Environment Variables
+Create a `.env` file in the project root:
+```bash
+PORT=3000
+NODE_ENV=development
 
-## Environment Variables
+# Google Gemini API key — powers classification, OCR, embeddings, and the decoy agent
+GEMINI_API_KEY=your_gemini_api_key
 
-Create
-
-```
-.env
-```
-
-```
-# Example
-
-API_KEY=your_api_key
-DATABASE_URL=your_database_url
-JWT_SECRET=your_secret
+# PostgreSQL connection (optional — the app falls back to an in-memory store if unset)
+SQL_HOST=your_postgres_host
+SQL_USER=your_postgres_user
+SQL_PASSWORD=your_postgres_password
+SQL_DB_NAME=your_postgres_database
 ```
 
----
-
-## Start Development
-
-```
+### Run Locally
+```bash
 npm run dev
 ```
 
----
-
-## Build
-
-```
+### Build & Start (production)
+```bash
 npm run build
+npm start
 ```
 
----
+## 🎯 Use Cases
 
-# 🎯 Use Cases
+- Digital arrest scam detection
+- UPI / payment fraud detection
+- Investment & job scam detection
+- Cybercrime investigation support
+- Cross-report threat intelligence & organized network analysis
+- Citizen cyber safety education
 
-- Digital Arrest Scam Detection
-- UPI Fraud Detection
-- Investment Scam Detection
-- Cybercrime Investigation
-- Threat Intelligence
-- Citizen Cyber Safety
-- Fraud Pattern Analysis
-
----
-
-# 🔒 Security
-
-RakshaNet follows secure development practices:
+## 🔒 Security
 
 - Environment variables excluded from version control
-- JWT authentication
-- Rate limiting
-- Input validation
-- Error handling
-- Secure API architecture
+- Helmet security headers, CORS, and per-IP rate limiting
+- Centralized input validation and error handling
+- Personal data redacted before any content is added to the learning corpus
 
----
+## 📈 Roadmap
 
-# 📈 Future Enhancements
+- [ ] Real-time external threat intelligence feeds
+- [ ] Multilingual scam detection (12 regional languages)
+- [ ] Voice / AI-generated speech scam analysis
+- [ ] Counterfeit currency identification (computer vision agent)
+- [ ] Geospatial crime pattern mapping for patrol prioritization
+- [ ] Mobile application & WhatsApp/IVR citizen access
+- [ ] Direct law enforcement portal integration (NCRP/I4C)
 
-- Real-time threat feeds
-- Multilingual scam detection
-- Voice scam analysis
-- Mobile application
-- Live cyber intelligence dashboard
-- Law enforcement integration
-
----
-
-# 🤝 Contributing
+## 🤝 Contributing
 
 Contributions are welcome.
 
-1. Fork the repository
-
-2. Create a feature branch
-
-```
+```bash
 git checkout -b feature-name
-```
-
-3. Commit changes
-
-```
 git commit -m "Add feature"
-```
-
-4. Push
-
-```
 git push origin feature-name
 ```
 
-5. Open a Pull Request
-
----
-
-# 📜 License
-
-This project is licensed under the MIT License.
+Then open a Pull Request.
 
 ---
 
 <div align="center">
 
-### ⭐ If you found this project useful, consider giving it a star!
+**⭐ If you found this project useful, consider giving it a star!**
 
 Built to make digital spaces safer.
 
